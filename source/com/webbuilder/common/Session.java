@@ -31,13 +31,13 @@ public class Session {
 			referer = "main?xwl=index";
 		if (Var.getBool("webbuilder.session.loginVerify"))
 			checkVerifyCode(request);
-		userCt = Install.getUserCount();
-		if (userCt != -1 && sessionList.size() > userCt - 1)
-			if (userCt == 3)
-				throw new Exception("Trial version only allows 3 active users.");
-			else
-				throw new Exception("The license only allows " + userCt
-						+ " active users.");
+		// userCt = Install.getUserCount();
+		// if (userCt != -1 && sessionList.size() > userCt - 1)
+		// 	if (userCt == 3)
+		// 		throw new Exception("Trial version only allows 3 active users.");
+		// 	else
+		// 		throw new Exception("The license only allows " + userCt
+		// 				+ " active users.");
 		userInfo = checkUser(request);
 		createSession(request, userInfo);
 		WebUtil.response(response, referer);
