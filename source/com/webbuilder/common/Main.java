@@ -51,7 +51,7 @@ public class Main extends HttpServlet {
 		try {
 			if (installed) {
 				MngTool.loadSystem(true);
-				Install.checkUpdate(ctx.getContextPath());
+				//Install.checkUpdate(ctx.getContextPath());
 			} else
 				Var.loadServerVar();
 		} catch (Throwable e) {
